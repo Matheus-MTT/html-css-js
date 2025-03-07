@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>titulo da pagina 1</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="descrição legal da minha pagina ">
+        <meta name="author" content="Matheus Yago">
+
+        <link rel="stylesheet" href="teste01.css">
+
+        <div style="
+        background: linear-gradient(135deg, #C599B6, #E6B2BA);
+        width: 250px;
+        height: 250px;
+        border: 10px solid transparent;
+        border-radius: 25px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.4s ease-in-out;
+        transform-style: preserve-3d;
+        transform: perspective(800px) rotateY(0deg) rotateX(0deg);
+    "
+      onmouseover="this.style.background='linear-gradient(135deg, #A16E9A, #F79489)';
+                   this.style.boxShadow='0px 0px 50px 20px #FF8E72';
+    
+                   this.querySelector('.neon-border').style.animation='neon-border 2s infinite';
+                   this.querySelector('.reflexo').style.opacity='1';
+                   this.querySelector('.face').style.display='block';"
+      onmouseout="this.style.background='linear-gradient(135deg, #C599B6, #E6B2BA)';
+                  this.style.boxShadow='0px 0px 30px 10px rgba(0, 0, 0, 0.3)';
+                  this.style.transform='perspective(800px) rotateY(0deg) rotateX(0deg) scale(1)';
+                  this.querySelector('.neon-border').style.animation='none';
+                  this.querySelector('.reflexo').style.opacity='0.5';
+                  this.querySelector('.face').style.display='none';">
+    
+      <div class="neon-border" style="
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: conic-gradient(from 0deg, #FF8E72, #F79489, #FAD0C4, #FF8E72);
+          animation: neon-border 3s linear infinite;
+          z-index: -1;
+          border-radius: inherit;
+          opacity: 0.8;
+      "></div>
+    
+      <div class="reflexo" style="
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0) 80%);
+          mix-blend-mode: overlay;
+          opacity: 0.5;
+          z-index: -2;
+      "></div>
+    
+      <!-- Rosto com CSS -->
+      <div class="face" style="
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          background-color: #FAD0C4;
+          border-radius: 50%;
+          display: none;
+          animation: face-animation 1s ease-in-out infinite;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      ">
+        <div class="eye-left" style="
+            position: absolute;
+            top: 30%;
+            left: 20%;
+            width: 25px;
+            height: 25px;
+            background-color: #333;
+            border-radius: 50%;
+            animation: blink 3s infinite;
+        "></div>
+        <div class="eye-right" style="
+            position: absolute;
+            top: 30%;
+            right: 20%;
+            width: 25px;
+            height: 25px;
+            background-color: #333;
+            border-radius: 50%;
+            animation: blink 3s infinite;
+        "></div>
+        <div class="mouth" style="
+            position: absolute;
+            bottom: 20%;
+            left: 15%;
+            width: 70%;
+            height: 20px;
+            background-color: #333;
+            border-radius: 50%;
+        "></div>
+      </div>
+    </div>
+    
+    <style>
+    @keyframes neon-border {
+        0% { transform: rotate(0deg) scale(1); }
+        50% { transform: rotate(180deg) scale(1.1); }
+        100% { transform: rotate(360deg) scale(1); }
+    }
+    
+    @keyframes blink {
+        0%, 100% { height: 25px; }
+        50% { height: 5px; }
+    }
+    
+    @keyframes face-animation {
+        0% { transform: scale(0.8); opacity: 0; }
+        50% { transform: scale(1); opacity: 1; }
+        100% { transform: scale(0.8); opacity: 0; }
+    }
+    </style>
+    
+    
+
+    </head>
+    
+    <body>
+        
+        <h1>titulo principal</h1>
+        <h1>experimento de live sever</h1>
+        <h2>titulo 2</h2>
+
+        <p> <a href="#">Lorem</a>, ipsum dolor sit amet consectetur adipisicing elit. Soluta ex omnis rerum velit, sunt facere sint ullam, consectetur esse minima tempora, distinctio sit dolorem voluptate quas eligendi veritatis labore excepturi?</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad reiciendis, praesentium soluta officia iste in nulla tenetur fugiat expedita voluptates necessitatibus voluptate fugit dolore veniam iusto iure magnam dicta accusantium nesciunt illo eos voluptatem? Quod magni earum ipsum aspernatur reprehenderit odit quibusdam, quis laborum, omnis consectetur minus maiores aut nam. Facere saepe earum, illum, libero laboriosam nihil ab id praesentium ea quae pariatur eveniet, blanditiis dolore temporibus debitis maiores iusto fuga nobis nam impedit laudantium rerum quidem molestias! Dolores nam nostrum cumque eum fugiat quis repudiandae voluptatem autem eius temporibus, qui incidunt. In rerum beatae vel commodi, voluptatibus nam eos.</p>
+
+    </body>
+</html>
